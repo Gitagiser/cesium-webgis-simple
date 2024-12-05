@@ -11,7 +11,7 @@ import { ref, onMounted } from "vue";
 onMounted(() => {
   console.log("cesium", Cesium);
 });
-const insertUrl = ref("");
+const insertUrl = ref("https://data.mars3d.cn/3dtiles/qx-hfdxy/tileset.json");
 let currentTileset = ref<Cesium.Cesium3DTileset | null>(null);
 async function loadTileset(): void {
   const url = insertUrl.value.trim();

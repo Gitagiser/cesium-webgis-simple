@@ -1,10 +1,11 @@
 <template>
   <div id="cesiumContainer"></div>
-  <div class="tool" style="position: fixed; top: 20px; left: 10px">
+  <!-- <div class="tool" style="position: fixed; top: 20px; left: 10px">
     <el-button type="primary" @click="dialogVisible = !dialogVisible" class="animate__animated animate__bounce">{{ dialogVisible ? "隐藏":"显示" }}</el-button>
-    <!-- <drawTool v-if="dialogVisible"></drawTool> -->
+    <drawTool v-if="dialogVisible"></drawTool>
     <threedtiles v-if="dialogVisible"></threedtiles>
-  </div>
+  </div> -->
+  <search class="animate__lightSpeedInLeft"/>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +14,7 @@ import * as Cesium from "cesium";
 import drawTool from "@/widgets/draw/index.vue";
 import threedtiles from "@/widgets/preview/threedtiles/threedtiles.vue";
 import MovablePopup from "@/components/MovablePopup/MovablePopup.vue";
+import search from "../search/search.vue";
 
 window.Cesium = Cesium;
 const dialogVisible = ref(false);
